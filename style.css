@@ -1,0 +1,152 @@
+:root {
+    /*main color*/
+    --main-bg-color: rgb(117, 20, 117);
+    --nav-bg-color: rgba(56, 132, 149, 0.8);
+
+    /*button colors*/
+    --btn-color: white;
+    --btn-bg-color: rgba(1, 15, 22, 0.5);
+    --btn-bg-hover-color: rgba(4, 26, 37, 0.8);
+
+    --btn-click-color: black;
+    --btn-bg-click-color: rgb(207, 207, 29);
+
+    /*notification color*/
+    --notification-color: yellow;
+    --notification-bg-color: rgba(15, 13, 13, 0.2);
+
+    /*logo color*/
+    --imdb-logo-color: lightGreen;
+
+    /* movie list color */
+    --favourite-movie-list-color: white;
+    --favourite-movie-list-hover-color: yellow;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: "Inter";
+    height: auto;
+    margin: 10px;
+    position: relative;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    height: 10%;
+    background-color: var(--nav-bg-color);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+nav span {
+    color: var(--imdb-logo-color);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#imdb-button {
+    transition: transform .1s;
+}
+
+#imdb-button:hover {
+    transform: scale(1.1);
+}
+
+#searchBar {
+    margin-left: 15px;
+    width: 27vw;
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: "Inter";
+}
+
+nav a {
+    text-decoration: none;
+    height: 75%;
+    position: absolute;
+    right: 15px;
+    bottom: -6px;
+}
+
+nav a span {
+    color: var(--favourite-movie-list-color);
+    font-family: "Inter";
+    font-weight: 100;
+    font-size: 1.4rem;
+}
+
+nav a span:hover {
+    color: var(--favourite-movie-list-hover-color);
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+#container>div {
+    width: 16%;
+    min-width: 125px;
+    position: relative;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    transition: transform .2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* button Effect */
+button {
+    width: 18%;
+    height: 16%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: var(--btn-bg-hover-color);
+    transform: scale(1.2);
+}
+
+button i {
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: var(--btn-click-color);
+}
+
+#notify {
+    position: fixed;
+    top: 8px;
+    left: 40%;
+    color: var(--notification-color);
+    font-size: 1rem;
+    background-color: var(--notification-bg-color);
+    padding: 3px;
+}

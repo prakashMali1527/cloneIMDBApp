@@ -1,0 +1,106 @@
+:root {
+    --main-bg-color: rgb(4, 18, 66);
+
+    /* about movie*/
+    --details-bg-color: #202020;
+    --movie-title-color: white;
+    --text-color: #f2f2f2;
+
+    --genre-color: rgb(82, 66, 227);
+    --genre-bg-color: rgb(100, 50, 50);
+
+    --language-color: rgb(203, 32, 32);
+    --language-bg-color: rgb(100, 50, 50);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#movieBox {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 70%;
+}
+
+/* left  :-> about movie*/
+#left {
+    color: var(--text-color);
+    background-color: var(--details-bg-color);
+    width: auto;
+    padding: 15px 22px;
+    font-size: 1.2rem;
+}
+
+#movie-title {
+    color: var(--movie-title-color);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.genre-value {
+    background-color: var(--genre-bg-color);
+    color: var(--genre-color);
+    padding: 3px 12px;
+    display: inline-block;
+    font-weight: 100;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+.language-value {
+    background-color: var(--language-bg-color);
+    color: var(--language-color);
+    padding: 3px 12px;
+    display: inline-block;
+    font-weight: 100;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+#movie-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* right Poster */
+
+#right img {
+    height: 100%;
+}
+
+
+/* media query */
+@media (max-width: 1000px) {
+    body {
+        height: 100%;
+    }
+
+    #movieBox {
+        width: 65%;
+        flex-direction: column-reverse;
+    }
+
+    #right {
+        width: 100%;
+        height: 100%;
+    }
+
+    #right img {
+        width: 100%;
+        height: 380px;
+    }
+
+}
