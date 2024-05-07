@@ -59,7 +59,7 @@ function showMovies(moviesList) {
         const movieTile = document.createElement('div');
         // encode moviedata for detailPage url
         const stringfiedMovieData = encodeURIComponent(JSON.stringify({ name, id, image, year }));
-        // console.log({ stringfiedMovieData });
+
         movieTile.innerHTML = `
         <a href="movieDetails.html?data=${stringfiedMovieData}" target="_blank">
             <img
@@ -108,6 +108,7 @@ function showMovies(moviesList) {
 // show dialog box on adding/removing movie for few seconds only
 function showNofication(movie = 'Movie', message) {
     notify.innerHTML = movie + " " + message;
+
     setTimeout(() => {
         notify.innerHTML = "";
     }, 1000);
@@ -119,6 +120,8 @@ let favourite_list_btn = document.querySelector('nav a span');
 
 let x = window.matchMedia("(max-width: 450px)");
 
-if(x.matches){
+if (x.matches) {
     favourite_list_btn.innerHTML = '<i class="fa-solid fa-list"></i>';
 }
+
+

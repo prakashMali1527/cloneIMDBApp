@@ -1,8 +1,8 @@
 :root {
-    --main-bg-color: rgb(4, 18, 66);
+    --main-bg-color: rgb(8, 17, 37);
 
     /* about movie*/
-    --details-bg-color: #202020;
+    --details-bg-color: #372f39;
     --movie-title-color: white;
     --text-color: #f2f2f2;
 
@@ -89,7 +89,8 @@ body {
     }
 
     #movieBox {
-        width: 65%;
+        width: 60%;
+        margin: 20px;
         flex-direction: column-reverse;
     }
 
@@ -103,4 +104,11 @@ body {
         height: 380px;
     }
 
+}
+
+@media (max-width: 480px) {
+    #movieBox {
+        width: 100%;
+        margin: 20px;
+    }
 }

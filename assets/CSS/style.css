@@ -1,7 +1,7 @@
 :root {
     /*main color*/
-    --main-bg-color: rgb(9, 103, 112);
-    --nav-bg-color: rgba(18, 175, 210, 0.8);
+    --main-bg-color: rgb(8, 17, 37);
+    --nav-bg-color: rgb(11, 34, 83);
 
     /*button colors*/
     --btn-color: white;
@@ -142,11 +142,13 @@ button i {
 }
 
 #notify {
-    position: fixed;
+    position: fixed; 
     top: 8px;
     left: 40%;
+
     color: var(--notification-color);
     font-size: 1rem;
     background-color: var(--notification-bg-color);
     padding: 3px;
+
 }
