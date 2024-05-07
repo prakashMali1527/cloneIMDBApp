@@ -64,7 +64,7 @@ nav span {
 
 #searchBar {
     margin-left: 15px;
-    width: 27vw;
+    width: 40vw;
     height: 100%;
     font-size: 1.2rem;
     font-family: "Inter";
@@ -98,7 +98,7 @@ nav a span:hover {
 
 #container>div {
     width: 16%;
-    min-width: 125px;
+    min-width: 150px;
     position: relative;
 
 }

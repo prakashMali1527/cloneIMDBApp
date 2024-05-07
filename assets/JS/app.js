@@ -112,3 +112,16 @@ function showNofication(movie = 'Movie', message) {
         notify.innerHTML = "";
     }, 1000);
 }
+
+// writing media query for phone size screen
+
+let x = window.matchMedia("(max-width: 450px)");
+
+x.addEventListener('change',function(){
+    let favourite_list_btn = document.querySelector('nav a span');
+    if(x.matches){
+        favourite_list_btn.innerHTML = '<i class="fa-solid fa-list"></i>';
+    }else {
+        favourite_list_btn.innerHTML = '<span>Favourite Movies <i class="fa-solid fa-list"></i></span>';
+    }
+});
