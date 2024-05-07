@@ -61,7 +61,7 @@ function showMovies(moviesList) {
         const stringfiedMovieData = encodeURIComponent(JSON.stringify({ name, id, image, year }));
         // console.log({ stringfiedMovieData });
         movieTile.innerHTML = `
-        <a href="movieDetailPage.html?data=${stringfiedMovieData}" target="_blank">
+        <a href="movieDetails.html?data=${stringfiedMovieData}" target="_blank">
             <img
                 src="${image}"
                 alt="${name}"

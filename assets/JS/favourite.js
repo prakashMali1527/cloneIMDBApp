@@ -10,7 +10,7 @@ function showFavourite(movieList) {
         let movieTile = document.createElement('div');
         const stringfiedMovieData = encodeURIComponent(JSON.stringify({id}));
         movieTile.innerHTML = `
-        <a href="movieDetailPage.html?data=${stringfiedMovieData}">
+        <a href="movieDetails.html?data=${stringfiedMovieData}">
             <img
                 src="${image}"
             >
