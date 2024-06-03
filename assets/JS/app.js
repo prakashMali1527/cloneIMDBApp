@@ -84,14 +84,14 @@ function showMovies(moviesList) {
 
         button.onclick = () => {
             if (button.style.backgroundColor == 'yellow') {
-                showNofication(name, 'Successfully Removed');
+                showNofication('Movie Removed from favouriteList');
                 button.innerHTML = '+';
                 button.style.backgroundColor = ' rgba(4, 26, 37, 0.5)';
                 // removing movie from local storage
                 localData = localData.filter(({ id: LocalID }) => LocalID !== id);
             }
             else {
-                showNofication(name, 'Successfully Added');
+                showNofication('Movie Added to favouriteList');
                 button.innerHTML = '<i class="fa-solid fa-check"></i>';
                 button.style.backgroundColor = "yellow";
                 // adding movie to local storage
@@ -106,12 +106,13 @@ function showMovies(moviesList) {
 }
 
 // show dialog box on adding/removing movie for few seconds only
-function showNofication(movie = 'Movie', message) {
-    notify.innerHTML = movie + " " + message;
+function showNofication(message) {
+    notify.style.transform = 'translate(-50%,0)';
+    notify.innerHTML = message;
 
     setTimeout(() => {
-        notify.innerHTML = "";
-    }, 1000);
+        notify.style.transform = 'translate(-50%,-75px)';
+    }, 1500);
 }
 
 // writing media query for phone size screen
